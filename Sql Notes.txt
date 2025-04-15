@@ -1,0 +1,24 @@
+# users table schema 
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    firstName VARCHAR(100) NOT NULL,
+    lastName VARCHAR(100) NOT NULL,
+    email VARCHAR(150) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    mobile VARCHAR(20) NOT NULL,
+    city VARCHAR(100) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+#moments table schema 
+
+CREATE TABLE moments (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  images VARCHAR(255) NOT NULL,
+  title TEXT NOT NULL,
+  tags VARCHAR(255),
+  userId INT NOT NULL,
+  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
